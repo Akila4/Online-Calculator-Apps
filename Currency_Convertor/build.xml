@@ -329,7 +329,7 @@ you've put the cobertura.jar file and the instrumented classes. -->
 	</target>
 
 	<!-- -->
-	<target name="junit-cob" depends="clean, build, instrument-classes"
+	<target name="junit-cob" depends="instrument-classes"
 		description="Run all junit test cases.">
 		<mkdir dir="${report.cobertura.dir}" />
 		<mkdir dir="${report.temp.dir}" />
