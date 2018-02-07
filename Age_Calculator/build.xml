@@ -102,7 +102,7 @@
         </javac>
     </target>
 	<target name="getwar" depends="build">
-		    <war destfile="${war.dir}\Calculator1.war"
+		    <war destfile="${war.dir}\Age_Calculator.war"
 	    	webxml = "${web.dir}\WEB-INF\web.xml">    
 	        <fileset dir = "${web.dir}">
 	        <include name = "**/*.*"/>
@@ -480,13 +480,13 @@ you've put the cobertura.jar file and the instrumented classes. -->
 	</target>
 
     <target name="zipwar" depends="getwar">
-   	<zip destfile="${zip.dir}/Calculator1.zip"
+   	<zip destfile="${zip.dir}/Age_Calculator.zip"
    	   basedir="${war.dir}"
    	   includes="**/*.war">
    	  </zip>
     </target>
    	<target name="getjar" depends="zipwar">
-   	 <jar destfile="${jar.dir}\Calculator1.jar">    
+   	 <jar destfile="${jar.dir}\Age_Calculator.jar">    
    	   <fileset dir = "${web.dir}">
    	    <include name = "**/*.*"/>
    	   </fileset>
