@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>AGE CALCULATOR</title>
+	 <link rel="stylesheet" type="text/css" href="all.css">
+	 <style type="text/css">
+ label { padding-right:20px }
+</style>
+	 <script type="text/javascript">
+$(document).ready(function(){
+  $("#signup_form").validate();
+});
+</script>
+</head>
+<body bgcolor="grey">
+<center>
+	<h1 font-family="forte">WIPRO </h1>
+	<h4>Applying Thoughts</h4>
+</center>
+	<br><br><br><br><br><br>
+
+<center>
+ <form method="get" action="echo"  id="signup_form">
+ <fieldset>
+  <legend>Age Calculator:</legend>
+   <label for="name">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp CURRENT DAY :	</label>
+        &nbsp&nbsp<input type="Number" name="Day"  maxlength="25" class="required"><br><br>
+   <label for="name">CURRENT MONTH :	</label>
+           &nbsp &nbsp<input type="Number" name="Month"  maxlength="25" class="required" ><br><br>
+   <label for="name">&nbsp&nbsp&nbsp&nbsp CURRENT YEAR :	</label>
+           &nbsp&nbsp <input type="text" name="Year"  maxlength="25" class="required" ><br><br>
+   <label for="name">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp BIRTH DAY :	 </label>
+          &nbsp  <input type="Number" name="birthDay"  maxlength="25" class="required"><br><br>
+   <label for="name">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBIRTH MONTH :	</label>
+            &nbsp<input type="Number" name="birthMonth"  maxlength="25" class="required"><br><br>
+   <label for="name">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBIRTH YEAR :	</label>
+            &nbsp<input type="text" name="birthYear"  maxlength="25" class="required" ><br><br>
+ <button type="submit" name="Submit" >SUBMIT</button>
+   </fieldset>
+   </form>
+  </center>
+</body>
+</html>
