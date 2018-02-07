@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CURRENCY CALCULATOR</title>
+<script>
+.center1 {  
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+input[type='text'],.spinner {
+	  float: right;
+	  margin: 0 1.5%;
+	  width: 30%;
+		border: 10px solid black;
+
+	}
+.parent {
+    list-style: none;
+    width: 100%;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+</script>
+</head>
+<body >
+<CENTER>
+<img src="currency-conversion.jpg"></img>
+<br/><br/><br/><br/><br/>
+<div  style="border: 3px solid #880000; width:40%;height:70%">
+<br/>
+<div class="parent">
+ <select id="ak"  style="margin-left:50px">
+  <option value="US-Dollar">US Dollar</option>
+  <option value="Euro">Euro</option>
+  <option value="Australian-Dollar">Australian Dollar</option>
+  <option value="New-Zealand-Dollar">New Zealand Dollar</option>
+    <option value="British-Pound">British Pound </option>
+  <option value="Singapore-Dollar">Singapore Dollar</option>
+  <option value="Malaysian-Ringgit">Malaysian Ringgit</option> 
+    <option value="India">Indian Rupee</option> 
+</select>
+<br><br><br>
+<b>Enter the Amount:</b><input type="text" id="amount" /></p>
+</div>
+<br/><br/>
+<div class="parent">
+<select id="ak1"  style="margin-left:5px">
+  <option value="US-Dollar">US Dollar</option>
+  <option value="Euro">Euro</option>
+  <option value="Australian-Dollar">Australian Dollar</option>
+  <option value="New-Zealand-Dollar">New Zealand Dollar</option>
+    <option value="British-Pound">British Pound </option>
+  <option value="Singapore-Dollar">Singapore Dollar</option>
+  <option value="Malaysian-Ringgit">Malaysian Ringgit</option> 
+    <option value="India">Indian Rupee</option> 
+</select>  
+<br><br>
+<input type="submit" value="Submit" onClick="Calculate()" />
+</div>
+<br/><br/>
+
+<div class ="parent">
+<section id="demo1"></section>
+<section id="demo"></section>
+</div>
+
+</CENTER>
+</div>
+<script>
+function Calculate()
+{
+	var amount=parseFloat(document.getElementById("amount").value);
+	var amount1;
+var e = document.getElementById("ak");
+
+var e1 = document.getElementById("ak1");
+var country1 = e.options[e.selectedIndex].value;
+var country2 = e1.options[e1.selectedIndex].value;
+//document.getElementById("demo1").innerHTML=country1+ " "+country2;
+if((country1.localeCompare(country2)) == 0)
+	{
+	document.getElementById("demo").innerHTML="Please!!! Dont select same country for conversion";
+	}
+else
+	{
+//	alert("came");
+	//US-Dollar
+	document.getElementById("demo1").innerHTML="<h1>VALUE :</h1>";
+	if(country1.localeCompare("US-Dollar") == 0)
+		{
+		//alert("came");
+				if(country2.localeCompare("Euro") == 0)
+						{
+						//alert("came");
+						amount1=amount*.8;
+						document.getElementById("demo").innerHTML=amount1;
+						}
+				else if(country2.localeCompare("New-Zealand-Dollar") == 0)
+				{
+					
+							amount1=amount*1.367;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+			
+				
+				else if(country2.localeCompare("British-Pound") == 0)
+				{
+				//alert("came");
+				amount1=amount*0.7088;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Singapore-Dollar") == 0)
+				{
+				//alert("came");
+				amount1=amount*1.3165;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Malaysian-Ringgit") == 0)
+				{
+				//alert("came");
+				amount1=amount*3.9;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("India") == 0)
+				{
+				//alert("came");
+				amount1=amount*64.11;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Australian-Dollar") == 0)
+				{
+				//alert("came");
+				amount1=amount*1.262;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				
+		}
+	
+	//EURO
+	if(country1.localeCompare("Euro") == 0)
+		{
+		//alert("came");
+				if(country2.localeCompare("US-Dollar") == 0)
+						{
+						//alert("came");
+						amount1=amount*1.25;
+						document.getElementById("demo").innerHTML=amount1;
+						}
+				else if(country2.localeCompare("New-Zealand-Dollar") == 0)
+				{
+					
+							amount1=amount*1.25;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+			
+				
+				else if(country2.localeCompare("British-Pound") == 0)
+				{
+				//alert("came");
+				amount1=amount*.88;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Singapore-Dollar") == 0)
+				{
+				//alert("came");
+				amount1=amount*1.64;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Malaysian-Ringgit") == 0)
+				{
+				//alert("came");
+				amount1=amount*4.86;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("India") == 0)
+				{
+				//alert("came");
+				amount1=amount*79.87;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Australian-Dollar") == 0)
+				{
+				//alert("came");
+				amount1=amount*1.57;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				
+		}
+	
+	
+	
+	//Australian Dollar
+	if(country1.localeCompare("Australian-Dollar") == 0)
+		{
+		//alert("came");
+				if(country2.localeCompare("US-Dollar") == 0)
+						{
+						//alert("came");
+						amount1=amount*.795;
+						document.getElementById("demo").innerHTML=amount1;
+						}
+				else if(country2.localeCompare("New-Zealand-Dollar") == 0)
+				{
+					
+							amount1=amount*1.085;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+			
+				
+				else if(country2.localeCompare("British-Pound") == 0)
+				{
+				//alert("came");
+				amount1=amount*.562;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Singapore-Dollar") == 0)
+				{
+				//alert("came");
+				amount1=amount*1.046;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Malaysian-Ringgit") == 0)
+				{
+				//alert("came");
+				amount1=amount*3.0995;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("India") == 0)
+				{
+				//alert("came");
+				amount1=amount*50.919;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Euro") == 0)
+				{
+				//alert("came");
+				amount1=amount*.637;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				
+		}
+
+//New-Zealand-Dollar
+	if(country1.localeCompare("New-Zealand-Dollar") == 0)
+		{
+		//alert("came");
+				if(country2.localeCompare("US-Dollar") == 0)
+						{
+						//alert("came");
+						amount1=amount*.73;
+						document.getElementById("demo").innerHTML=amount1;
+						}
+				else if(country2.localeCompare("Australian-Dollar") == 0)
+				{
+					
+							amount1=amount*.92;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+			
+				
+				else if(country2.localeCompare("British-Pound") == 0)
+				{
+				//alert("came");
+				amount1=amount*.5179;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Singapore-Dollar") == 0)
+				{
+				//alert("came");
+				amount1=amount*.9648;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Malaysian-Ringgit") == 0)
+				{
+				//alert("came");
+				amount1=amount*2.86;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("India") == 0)
+				{
+				//alert("came");
+				amount1=amount*46.93;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Euro") == 0)
+				{
+				//alert("came");
+				amount1=amount*.59;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				
+		}
+ 
+
+//Brithish-pound
+	if(country1.localeCompare("British-Pound") == 0)
+		{
+		//alert("came");
+				if(country2.localeCompare("US-Dollar") == 0)
+						{
+						//alert("came");
+						amount1=amount*1.41;
+						document.getElementById("demo").innerHTML=amount1;
+						}
+				else if(country2.localeCompare("Australian-Dollar") == 0)
+				{
+					
+							amount1=amount*1.78;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+			
+				
+				else if(country2.localeCompare("New-Zealand-Dollar") == 0)
+				{
+				//alert("came");
+				amount1=amount* 1.93;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Singapore-Dollar") == 0)
+				{
+				//alert("came");
+				amount1=amount*1.876;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Malaysian-Ringgit") == 0)
+				{
+				//alert("came");
+				amount1=amount*5.51;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("India") == 0)
+				{
+				//alert("came");
+				amount1=amount*90.47;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				else if(country2.localeCompare("Euro") == 0)
+				{
+				//alert("came");
+				amount1=amount*1.13;
+				document.getElementById("demo").innerHTML=amount1;
+				}
+				
+		}
+
+	 
+
+	//Singapore-Dollar
+		if(country1.localeCompare("Singapore-Dollar") == 0)
+			{
+			//alert("came");
+					if(country2.localeCompare("US-Dollar") == 0)
+							{
+							//alert("came");
+							amount1=amount*1.316;
+							document.getElementById("demo").innerHTML=amount1;
+							}
+					else if(country2.localeCompare("Australian-Dollar") == 0)
+					{
+						
+								amount1=amount*.955;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+				
+					
+					else if(country2.localeCompare("New-Zealand-Dollar") == 0)
+					{
+					//alert("came");
+					amount1=amount* 1.036;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					else if(country2.localeCompare("British-Pound") == 0)
+					{
+					//alert("came");
+					amount1=amount*.537;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					else if(country2.localeCompare("Malaysian-Ringgit") == 0)
+					{
+					//alert("came");
+					amount1=amount*5.507;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					else if(country2.localeCompare("India") == 0)
+					{
+					//alert("came");
+					amount1=amount*90.458;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					else if(country2.localeCompare("Euro") == 0)
+					{
+					//alert("came");
+					amount1=amount*1.1329;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					
+			}
+		//Malaysian-Ringgit
+		if(country1.localeCompare("Malaysian-Ringgit") == 0)
+			{
+			//alert("came");
+					if(country2.localeCompare("US-Dollar") == 0)
+							{
+							//alert("came");
+							amount1=amount*1.41;
+							document.getElementById("demo").innerHTML=amount1;
+							}
+					else if(country2.localeCompare("Australian-Dollar") == 0)
+					{
+						
+								amount1=amount*1.776;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+				
+					
+					else if(country2.localeCompare("New-Zealand-Dollar") == 0)
+					{
+					//alert("came");
+					amount1=amount* 1.927;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					else if(country2.localeCompare("British-Pound") == 0)
+					{
+					//alert("came");
+					amount1=amount*1;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					else if(country2.localeCompare("Singapore-Dollar") == 0)
+					{
+					//alert("came");
+					amount1=amount*1.858;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					else if(country2.localeCompare("India") == 0)
+					{
+					//alert("came");
+					amount1=amount*90.408;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					else if(country2.localeCompare("Euro") == 0)
+					{
+					//alert("came");
+					amount1=amount*1.1325;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					
+			} 
+		//India
+		if(country1.localeCompare("India") == 0)
+			{
+			//alert("came");
+					if(country2.localeCompare("US-Dollar") == 0)
+							{
+							//alert("came");
+							amount1=amount*0.0156;
+							document.getElementById("demo").innerHTML=amount1;
+							}
+					else if(country2.localeCompare("Australian-Dollar") == 0)
+					{
+						
+								amount1=amount*0.0196;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+				
+					
+					else if(country2.localeCompare("New-Zealand-Dollar") == 0)
+					{
+					//alert("came");
+					amount1=amount* 0.021;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					else if(country2.localeCompare("British-Pound") == 0)
+					{
+					//alert("came");
+					amount1=amount*0.011;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					else if(country2.localeCompare("Singapore-Dollar") == 0)
+					{
+					//alert("came");
+					amount1=amount*0.0205;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					else if(country2.localeCompare("Malaysian-Ringgit") == 0)
+					{
+					//alert("came");
+					amount1=amount*0.0618;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					else if(country2.localeCompare("Euro") == 0)
+					{
+					//alert("came");
+					amount1=amount*0.0125;
+					document.getElementById("demo").innerHTML=amount1;
+					}
+					
+			} 
+	}
+}
+</script>
+</body>
+</html>
