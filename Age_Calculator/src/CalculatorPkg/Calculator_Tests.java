@@ -14,6 +14,7 @@ public class Calculator_Tests{
 	  int Month;
 	  int Year;
    int BYear;
+	int try;
 	  int BDay;
 	 	int BMonth;
 
